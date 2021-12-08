@@ -78,19 +78,16 @@ class RegistroActivity : AppCompatActivity() {
                     } else {
                         when (task.exception) {
                             is FirebaseAuthWeakPasswordException -> {
-                                Snackbar.make(view, R.string.password_weak, Snackbar.LENGTH_LONG)
-                                    .show()
+                                Snackbar.make(view, R.string.password_weak,
+                                    Snackbar.LENGTH_LONG).show()
                             }
                             else -> {
-                                Snackbar.make(view, R.string.fail_register, Snackbar.LENGTH_LONG)
-                                    .show()
+                                Snackbar.make(view, R.string.fail_register,
+                                    Snackbar.LENGTH_LONG).show()
                             }
                         }
-
                     }
                 }
-
-
         }
     }
 
